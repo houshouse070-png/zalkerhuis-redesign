@@ -1,67 +1,105 @@
 
-// ===================================
-// ZALKERHUIS WEBSITE JAVASCRIPT
-// Independent redesign concept
-// ===================================
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  // MOBILE NAVIGATION
+  // Mobile navigation
   const menuToggle = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".navigation");
 
   if (menuToggle && navigation) {
-
     menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Menu openen" : "Menu sluiten"
-      );
-
-      navigation.classList.toggle("open", !isOpen);
+      const isOpen = navigation.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close menu after clicking a navigation link
-    navigation.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Menu openen");
-        navigation.classList.remove("open");
-      });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener("click", event => {
+    document.addEventListener("click", (event) => {
       if (
         !navigation.contains(event.target) &&
         !menuToggle.contains(event.target)
       ) {
-        navigation.classList.remove("open");
+        navigation.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Menu openen");
       }
     });
 
-    // Close menu with Escape key
-    document.addEventListener("keydown", event => {
+    document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
-        navigation.classList.remove("open");
+        navigation.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Menu openen");
-        menuToggle.focus();
       }
     });
-
   }
 
-  // FOOTER CURRENT YEAR
-  const yearElement = document.querySelector("[data-year]");
-
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+  // Footer year
+  const year = document.querySelector("[data-year]");
+  if (year) {
+    year.textContent = new Date().getFullYear();
   }
 
+  // Menu search and category filters
+  const searchInput = document.querySelector("#menuSearch");
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const categories = document.querySelectorAll(".menu-category");
+
+  let activeFilter = "all";
+
+  function updateMenu() {
+    const searchTerm = searchInput
+      ? searchInput.value.toLowerCase().trim()
+      : "";
+
+    categories.forEach((category) => {
+      const categoryName = category.dataset.category;
+      const categoryMatches =
+        activeFilter === "all" || activeFilter === categoryName;
+
+      let visibleItems = 0;
+
+      // Filter food cards
+      category.querySelectorAll(".menu-card").forEach((card) => {
+        const matchesSearch = card.textContent
+          .toLowerCase()
+          .includes(searchTerm);
+
+        const show = categoryMatches && matchesSearch;
+        card.hidden = !show;
+
+        if (show) visibleItems++;
+      });
+
+      // Filter simple menu rows
+      category
+        .querySelectorAll(".simple-menu-list > div")
+        .forEach((item) => {
+          const matchesSearch = item.textContent
+            .toLowerCase()
+            .includes(searchTerm);
+
+          const show = categoryMatches && matchesSearch;
+          item.hidden = !show;
+
+          if (show) visibleItems++;
+        });
+
+      // Keep categories visible only when they have matching items
+      category.hidden = !categoryMatches || visibleItems === 0;
+    });
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      button.classList.add("active");
+      activeFilter = button.dataset.filter || "all";
+
+      updateMenu();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", updateMenu);
+  }
+
+  updateMenu();
 });
