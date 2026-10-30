@@ -1,0 +1,756 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#183b2d">
+  <meta name="description" content="Bekijk de menukaart van Restaurant Zalkerhuis in Zalk. Lunch, Josper BBQ, schnitzels, vis en desserts.">
+  <title>Menukaart | Zalkerhuis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="concept-notice">
+    Independent redesign concept · Niet de officiële website
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">Z</span>
+      <span class="logo-text">
+        <strong>ZALKERHUIS</strong>
+        <small>RESTAURANT & BBQ</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Menu openen"
+      aria-expanded="false" aria-controls="navigation">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menukaart</a>
+      <a href="about.html">Ons verhaal</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-button" href="contact.html">Reserveer / contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- MENU HERO -->
+    <section class="menu-hero">
+      <div class="menu-hero-image"></div>
+      <div class="menu-hero-overlay"></div>
+
+      <div class="menu-hero-content">
+        <span class="section-label">GOED ETEN BEGINT HIER</span>
+        <h1>Onze <em>menukaart.</em></h1>
+        <p>
+          Van een heerlijke lunch tot gerechten van
+          onze Josper BBQ. Ontdek wat er op tafel komt.
+        </p>
+        <a href="#menukaart" class="button button-gold">
+          Bekijk de gerechten ↓
+        </a>
+      </div>
+    </section>
+
+    <!-- MENU INTRO -->
+    <section class="menu-intro section-padding">
+      <span class="section-label">MET SMAAK BEREID</span>
+      <h2>Voor ieder moment<br><em>iets lekkers.</em></h2>
+      <p>
+        Geniet van onze lunchgerechten, gegrilde
+        specialiteiten en heerlijke desserts.
+        Bekijk hieronder onze menukaart.
+      </p>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-main section-padding" id="menukaart">
+
+      <div class="menu-toolbar">
+        <div class="menu-search">
+          <span>⌕</span>
+          <input type="search" id="menuSearch"
+            placeholder="Zoek een gerecht..."
+            aria-label="Zoek een gerecht">
+        </div>
+
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">Alles</button>
+          <button class="filter-btn" data-filter="lunch">Lunch</button>
+          <button class="filter-btn" data-filter="starters">Voorgerechten</button>
+          <button class="filter-btn" data-filter="josper">Josper & vlees</button>
+          <button class="filter-btn" data-filter="schnitzel">Schnitzels</button>
+          <button class="filter-btn" data-filter="vegetarian">Vegetarisch</button>
+          <button class="filter-btn" data-filter="fish">Vis</button>
+          <button class="filter-btn" data-filter="dessert">Desserts</button>
+          <button class="filter-btn" data-filter="drinks">Dranken</button>
+        </div>
+      </div>
+
+      <!-- LUNCH -->
+      <div class="menu-category" id="lunch" data-category="lunch">
+        <div class="category-heading">
+          <span class="section-label">01 / OVERDAG</span>
+          <h2>Lunch <em>kaart.</em></h2>
+          <p>Heerlijke lunchgerechten voor een smakelijke pauze.</p>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="huisgemaakte tomatensoep">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Tomatensoep">
+            <div class="menu-card-content">
+              <h3>Huisgemaakte Tomatensoep</h3>
+              <p>Huisgemaakte soep van de chef.</p>
+              <strong>€ 7,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="tosti ham kaas">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600&q=80" alt="Tosti">
+            <div class="menu-card-content">
+              <h3>Tosti Ham / Kaas</h3>
+              <p>Keuze uit wit of bruin brood.</p>
+              <strong>€ 8,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="tosti ham kaas ananas">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600&q=80" alt="Tosti met ananas">
+            <div class="menu-card-content">
+              <h3>Tosti Ham / Kaas / Ananas</h3>
+              <p>Met een zoete twist.</p>
+              <strong>€ 9,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="uitsmijter ham kaas">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80" alt="Uitsmijter">
+            <div class="menu-card-content">
+              <h3>Uitsmijter Ham / Kaas</h3>
+              <p>Met 3 eitjes.</p>
+              <strong>€ 10,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="uitsmijter spek kaas">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80" alt="Uitsmijter met spek">
+            <div class="menu-card-content">
+              <h3>Uitsmijter Spek / Kaas</h3>
+              <p>Met 3 eitjes.</p>
+              <strong>€ 12,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="12 uurtje">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Lunchgerecht">
+            <div class="menu-card-content">
+              <h3>12 Uurtje</h3>
+              <p>Tomatensoep, Dobbenkroket en gebakken eitje.</p>
+              <strong>€ 13,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="broodje gezond">
+            <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=600&q=80" alt="Broodje gezond">
+            <div class="menu-card-content">
+              <h3>Broodje Gezond</h3>
+              <p>Ham, kaas, tomaat, gekookt ei en komkommer.</p>
+              <strong>€ 7,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="broodje warme beenham">
+            <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=600&q=80" alt="Broodje beenham">
+            <div class="menu-card-content">
+              <h3>Broodje Warme Beenham</h3>
+              <p>Met honing-mosterdsaus.</p>
+              <strong>€ 9,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="saucijzenbroodje kaasbroodje">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Broodjes">
+            <div class="menu-card-content">
+              <h3>Saucijzenbroodje / Kaasbroodje</h3>
+              <p>Een hartige snack.</p>
+              <strong>€ 4,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="kip sandwich">
+            <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&q=80" alt="Kipsandwich">
+            <div class="menu-card-content">
+              <h3>Kip Sandwich</h3>
+              <p>Gemarineerde kippedij, huisgemaakte chili en mayo.</p>
+              <strong>€ 10,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="steak sandwich">
+            <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=600&q=80" alt="Steak sandwich">
+            <div class="menu-card-content">
+              <h3>Steak Sandwich</h3>
+              <p>Diamanthaas van eigen bodem, truffelmayo en Parmezaanse kaas.</p>
+              <strong>€ 12,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="broodje hamburger">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Hamburger">
+            <div class="menu-card-content">
+              <h3>Broodje Hamburger</h3>
+              <p>180 g rundvlees, gebakken ei, ui, augurk en hamburgersaus.</p>
+              <strong>€ 11,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="gehaktbal">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Gehaktbal">
+            <div class="menu-card-content">
+              <h3>Gehaktbal</h3>
+              <p>Een Hollandse klassieker.</p>
+              <strong>€ 6,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="gehaktbal friet">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80" alt="Friet">
+            <div class="menu-card-content">
+              <h3>Gehaktbal + Friet</h3>
+              <p>Gehaktbal met verse friet.</p>
+              <strong>€ 10,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="frikandel kroket los">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80" alt="Snacks">
+            <div class="menu-card-content">
+              <h3>Frikandel / Kroket Los</h3>
+              <p>2 stuks.</p>
+              <strong>€ 6,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="frikandel kroket friet">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80" alt="Snack met friet">
+            <div class="menu-card-content">
+              <h3>Frikandel / Kroket / Friet</h3>
+              <p>Een complete snackmaaltijd.</p>
+              <strong>€ 9,00</strong>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- STARTERS -->
+      <div class="menu-category" id="starters" data-category="starters">
+        <div class="category-heading">
+          <span class="section-label">02 / OM MEE TE BEGINNEN</span>
+          <h2>Voorgerechten <em>& snacks.</em></h2>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="tomatensoep">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Tomatensoep">
+            <div class="menu-card-content">
+              <h3>Huisgemaakte Tomatensoep</h3>
+              <p>Soep van de chef.</p>
+              <strong>€ 7,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="gepaneeerde gamba staarten">
+            <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=600&q=80" alt="Garnalen">
+            <div class="menu-card-content">
+              <h3>Gepaneerde Gambastaarten</h3>
+              <p>Met zoete chilisaus.</p>
+              <strong>€ 9,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="broodplank">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Broodplank">
+            <div class="menu-card-content">
+              <h3>Broodplank (2 pers.)</h3>
+              <p>Met pesto, kruidenboter en aioli.</p>
+              <strong>€ 8,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="chicken wings">
+            <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&q=80" alt="Chicken wings">
+            <div class="menu-card-content">
+              <h3>Chicken Wings (6 st.)</h3>
+              <p>Met zoete chilisaus.</p>
+              <strong>€ 7,25</strong>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- JOSPER AND MEAT -->
+      <div class="menu-category" id="josper" data-category="josper">
+        <div class="category-heading">
+          <span class="section-label">03 / VAN DE GRILL</span>
+          <h2>Josper BBQ <em>& vlees.</em></h2>
+          <p>Onze kip- en rundvleesgerechten worden bereid in de Spaanse Josper houtskool BBQ oven.</p>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="chicken combi 1 persoon">
+            <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&q=80" alt="Chicken wings">
+            <div class="menu-card-content">
+              <h3>Chicken Combi (1 pers.)</h3>
+              <p>4 chicken wings, 4 chicken fingers en chili saus of chili mayo.</p>
+              <strong>€ 16,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="chicken combi 2 personen">
+            <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&q=80" alt="Chicken combi">
+            <div class="menu-card-content">
+              <h3>Chicken Combi (2 pers.)</h3>
+              <p>8 chicken wings, 8 chicken fingers en chili saus of chili mayo.</p>
+              <strong>€ 30,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="mixed grill 1 persoon">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Mixed grill">
+            <div class="menu-card-content">
+              <h3>Mixed Grill (1 pers.)</h3>
+              <p>4 chicken wings, 2 kipsaté en 3 spareribs. Met chili-, saté- en knoflooksaus.</p>
+              <strong>€ 22,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="mixed grill 2 personen">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Mixed grill">
+            <div class="menu-card-content">
+              <h3>Mixed Grill (2 pers.)</h3>
+              <p>8 chicken wings, 4 kipsaté en 6 spareribs. Met diverse sauzen.</p>
+              <strong>€ 40,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="kip sate">
+            <img src="https://images.unsplash.com/photo-1529563021893-cc83c992d75d?w=600&q=80" alt="Kipsaté">
+            <div class="menu-card-content">
+              <h3>Kip Saté</h3>
+              <p>2 stokjes à 100 g, kroepoek, gebakken uitjes en satésaus.</p>
+              <strong>€ 19,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="halve kip">
+            <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600&q=80" alt="Gegrilde kip">
+            <div class="menu-card-content">
+              <h3>Halve Kip</h3>
+              <p>Met chili of chili mayo.</p>
+              <strong>€ 19,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="spareribs">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Spareribs">
+            <div class="menu-card-content">
+              <h3>Spareribs</h3>
+              <p>Zoet, pikant of BBQ. Met knoflooksaus.</p>
+              <strong>€ 19,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="hamburger">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Hamburger">
+            <div class="menu-card-content">
+              <h3>Hamburger</h3>
+              <p>Met gebakken ui, ei, augurk en hamburgersaus.</p>
+              <strong>€ 17,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="procureur lapje">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Gegrild vlees">
+            <div class="menu-card-content">
+              <h3>Procureurlapje</h3>
+              <p>220 g met jachtsaus.</p>
+              <strong>€ 18,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="varkenshaas">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Varkenshaas">
+            <div class="menu-card-content">
+              <h3>Varkenshaas</h3>
+              <p>200 g met champignonroomsaus.</p>
+              <strong>€ 22,50</strong>
+            </div>
+          </article>
+
+        </div>
+        <p class="menu-footnote">
+          Hoofdgerechten worden geserveerd met warme groenten
+          of gemengde salade en geroosterde aardappelen of verse Hollandse friet.
+          Al onze kip- en rundvleesgerechten zijn halal.
+        </p>
+      </div>
+
+      <!-- SCHNITZELS -->
+      <div class="menu-category" id="schnitzels" data-category="schnitzel">
+        <div class="category-heading">
+          <span class="section-label">04 / UIT DE KEUKEN</span>
+          <h2>Schnitzel <em>gerechten.</em></h2>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="kip schnitzel">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Kipschnitzel">
+            <div class="menu-card-content">
+              <h3>Kip Schnitzel</h3>
+              <p>220 g met satésaus of saus naar keuze.</p>
+              <strong>€ 19,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="schnitzel naturel">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Schnitzel">
+            <div class="menu-card-content">
+              <h3>Schnitzel Naturel</h3>
+              <p>220 g.</p>
+              <strong>€ 17,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="schnitzel hawaii">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Schnitzel Hawaii">
+            <div class="menu-card-content">
+              <h3>Schnitzel Hawaii</h3>
+              <p>220 g, ananas, cheddar cheese en chilisaus.</p>
+              <strong>€ 20,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="schnitzel zalkerbroek">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Schnitzel Zalkerbroek">
+            <div class="menu-card-content">
+              <h3>Schnitzel Zalkerbroek</h3>
+              <p>220 g, spekjes, champignons en saus naar keuze.</p>
+              <strong>€ 20,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="schnitzel holsteiner">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Schnitzel Holsteiner">
+            <div class="menu-card-content">
+              <h3>Schnitzel Holsteiner</h3>
+              <p>Met gebakken ei en champignonsaus.</p>
+              <strong>€ 20,00</strong>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- VEGETARIAN -->
+      <div class="menu-category" id="vegetarian" data-category="vegetarian">
+        <div class="category-heading">
+          <span class="section-label">05 / ZONDER VLEES</span>
+          <h2>Vegetarisch <em>genieten.</em></h2>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="mini vegetarische loempias">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Vegetarische snacks">
+            <div class="menu-card-content">
+              <h3>Vega Mini Loempia's</h3>
+              <p>4 stuks met zoete chilisaus of chili mayo.</p>
+              <strong>€ 14,50</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="vega burger">
+            <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&q=80" alt="Vegetarische burger">
+            <div class="menu-card-content">
+              <h3>Vega Burger</h3>
+              <p>150 g met gebakken uitjes, augurk en burgersaus.</p>
+              <strong>€ 16,50</strong>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- FISH -->
+      <div class="menu-category" id="fish" data-category="fish">
+        <div class="category-heading">
+          <span class="section-label">06 / UIT HET WATER</span>
+          <h2>Vis <em>gerechten.</em></h2>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="fish and chips heek filet">
+            <img src="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=600&q=80" alt="Fish and chips">
+            <div class="menu-card-content">
+              <h3>Fish & Chips</h3>
+              <p>200 g graatloze heekfilet met remouladesaus of saus naar keuze.</p>
+              <strong>€ 18,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="kibbeling">
+            <img src="https://images.unsplash.com/photo-1579208030886-b937da0925dc?w=600&q=80" alt="Kibbeling">
+            <div class="menu-card-content">
+              <h3>Kibbeling</h3>
+              <p>250 g met remouladesaus of saus naar keuze.</p>
+              <strong>€ 19,00</strong>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- SIDES -->
+      <div class="menu-category" id="sides" data-category="sides">
+        <div class="category-heading">
+          <span class="section-label">07 / ERBIJ BESTELLEN</span>
+          <h2>Bijgerechten <em>& sauzen.</em></h2>
+        </div>
+
+        <div class="simple-menu-list">
+          <div><span>Aardappelen of friet</span><strong>€ 4,00</strong></div>
+          <div><span>Salade of groenten</span><strong>€ 4,00</strong></div>
+          <div><span>Loaded fries met truffelmayo en Parmezaanse kaas</span><strong>€ 7,50</strong></div>
+          <div><span>Warme sausjes</span><strong>€ 1,50</strong></div>
+          <div><span>Koude sausjes</span><strong>€ 1,00</strong></div>
+          <div><span>Appelmoes</span><strong>€ 1,00</strong></div>
+        </div>
+      </div>
+
+      <!-- CHILDREN -->
+      <div class="menu-category" id="kids" data-category="kids">
+        <div class="category-heading">
+          <span class="section-label">08 / VOOR DE KLEINSTE GASTEN</span>
+          <h2>Kindermenu <em>✳</em></h2>
+        </div>
+
+        <div class="kids-menu">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=700&q=80" alt="Friet met kindermenu">
+          <div>
+            <h3>Het Kindermenu</h3>
+            <p>
+              Grote friet, chicken fingers, kroket of frikandel.
+              Met krulfriet, appelmoes, ketchup of mayo.
+              Inclusief kleine surprise.
+            </p>
+            <strong>€ 12,50</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-category" id="desserts" data-category="dessert">
+        <div class="category-heading">
+          <span class="section-label">09 / IETS ZOETS</span>
+          <h2>Desserts <em>& ijs.</em></h2>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="dame blanche">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Dame blanche">
+            <div class="menu-card-content">
+              <h3>Dame Blanche</h3>
+              <p>3 bolletjes vanille-ijs, slagroom en warme chocoladesaus.</p>
+              <strong>€ 7,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="sorbet zalkerbroek">
+            <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=600&q=80" alt="Sorbet">
+            <div class="menu-card-content">
+              <h3>Sorbet Zalkerbroek</h3>
+              <p>3 bollen gemengd ijs, vruchtjes, slagroom en aardbeiensaus.</p>
+              <strong>€ 8,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="figolas ijs">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="IJs">
+            <div class="menu-card-content">
+              <h3>Figola's IJs</h3>
+              <p>3 bollen gemengd ijs, slagroom en aardbei- of chocoladesaus.</p>
+              <strong>€ 7,00</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="advocaatje slagroom">
+            <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=600&q=80" alt="Dessert">
+            <div class="menu-card-content">
+              <h3>Advocaatje met Slagroom</h3>
+              <p>Lekker ouderwets.</p>
+              <strong>€ 4,75</strong>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="een bol ijs">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Bol ijs">
+            <div class="menu-card-content">
+              <h3>1 Bol IJs</h3>
+              <p>Een bolletje ijs naar keuze.</p>
+              <strong>€ 2,50</strong>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-category" id="drinks" data-category="drinks">
+        <div class="category-heading">
+          <span class="section-label">10 / VOOR ERBIJ</span>
+          <h2>Dranken <em>& lekkers.</em></h2>
+        </div>
+
+        <h3 class="drink-subheading">Bij de koffie</h3>
+        <div class="simple-menu-list">
+          <div><span>Appelgebak</span><strong>€ 4,50</strong></div>
+          <div><span>Hazelino (glutenvrij schuimgebak)</span><strong>€ 4,50</strong></div>
+          <div><span>Gevulde koek</span><strong>€ 3,00</strong></div>
+        </div>
+
+        <h3 class="drink-subheading">Bij de borrel</h3>
+        <div class="simple-menu-list">
+          <div><span>Bitterballen (8 st.)</span><strong>€ 7,50</strong></div>
+          <div><span>Vlammetjes (8 st.)</span><strong>€ 7,50</strong></div>
+          <div><span>Luxe mix (10 st.)</span><strong>€ 9,50</strong></div>
+        </div>
+
+        <h3 class="drink-subheading">Warme dranken</h3>
+        <div class="simple-menu-list">
+          <div><span>Koffie – bonbon, slagroom of caramelsiroop</span><strong>€ 3,50</strong></div>
+          <div><span>Thee</span><strong>€ 3,50</strong></div>
+          <div><span>Cappuccino / Koffie verkeerd</span><strong>€ 4,00</strong></div>
+          <div><span>Latte Macchiato</span><strong>€ 4,00</strong></div>
+          <div><span>Espresso</span><strong>€ 3,00</strong></div>
+          <div><span>Dubbele Espresso</span><strong>€ 4,50</strong></div>
+          <div><span>Chocomelk</span><strong>€ 4,00</strong></div>
+          <div><span>Slagroom bij chocomelk</span><strong>€ 0,50</strong></div>
+          <div><span>Verse gemberthee</span><strong>€ 4,50</strong></div>
+          <div><span>Verse muntthee</span><strong>€ 4,50</strong></div>
+          <div><span>Koffie Zalkerbroek</span><strong>€ 7,50</strong></div>
+        </div>
+
+        <h3 class="drink-subheading">Speciale koffie</h3>
+        <div class="simple-menu-list">
+          <div><span>Irish koffie</span><strong>€ 9,00</strong></div>
+          <div><span>Italiaanse koffie</span><strong>€ 9,00</strong></div>
+        </div>
+
+        <h3 class="drink-subheading">Koude dranken</h3>
+        <div class="simple-menu-list">
+          <div><span>Cola, Cola Zero, Fanta, Cassis, Sprite, 7-Up</span><strong>€ 3,50</strong></div>
+          <div><span>Spa rood / blauw</span><strong>€ 3,25</strong></div>
+          <div><span>Appelsap</span><strong>€ 3,25</strong></div>
+          <div><span>Verse jus d'orange</span><strong>€ 4,50</strong></div>
+          <div><span>Rivella, Ginger Ale, Bitter Lemon, Tonic</span><strong>€ 3,50</strong></div>
+          <div><span>Ice Tea Green, Perzik, Sparkling</span><strong>€ 3,50</strong></div>
+          <div><span>Red Bull</span><strong>€ 4,50</strong></div>
+          <div><span>Fristi, melk, karnemelk</span><strong>€ 3,00</strong></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- WEEKLY SPECIALS -->
+    <section class="specials section-padding">
+      <div class="category-heading">
+        <span class="section-label">IEDERE WEEK IETS LEKKERS</span>
+        <h2>Onze <em>weekacties.</em></h2>
+      </div>
+
+      <div class="special-grid">
+
+        <article class="special-card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="Spareribs">
+          <div>
+            <span class="card-label">ELKE DINSDAG</span>
+            <h3>All You Can Eat Spareribs</h3>
+            <p>
+              Zoet, pikant of BBQ. Met friet en coleslaw
+              of gegrilde groenten en knoflooksaus.
+            </p>
+            <strong>€ 18,00</strong>
+          </div>
+        </article>
+
+        <article class="special-card">
+          <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=800&q=80" alt="Halve kip">
+          <div>
+            <span class="card-label">ELKE WOENSDAG</span>
+            <h3>Halve Kipmenu</h3>
+            <p>
+              Halve halal kip van de Josper BBQ,
+              met verse friet, huisgemaakte coleslaw
+              en mayonaise of tomatenketchup.
+            </p>
+            <strong>€ 15,00</strong>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MENU NOTICE -->
+    <section class="menu-notice">
+      <h2>Heb je een allergie?</h2>
+      <p>
+        Informeer onze medewerkers over voedselallergieën
+        of intoleranties. Zij helpen je graag bij je menukeuze.
+        Kruisbesmetting kan helaas niet volledig worden uitgesloten.
+      </p>
+      <a href="contact.html" class="button button-green">Neem contact op →</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="index.html" class="logo footer-logo">
+      <span class="logo-mark">Z</span>
+      <span class="logo-text">
+        <strong>ZALKERHUIS</strong>
+        <small>RESTAURANT & BBQ</small>
+      </span>
+    </a>
+
+    <p>Goed eten. Echt genieten.</p>
+
+    <div class="footer-bottom">
+      <span>Independent redesign concept · Portfolio project</span>
+      <a href="https://www.zalkerhuis.nl/menukaart/">Originele menukaart ↗</a>
+    </div>
+  </footer>
+
+</body>
+</html>
